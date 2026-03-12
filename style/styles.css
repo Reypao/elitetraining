@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Jura", sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.6;
@@ -98,9 +98,14 @@ p {
 }
 
 .site-header {
-  position: sticky;
+  
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 95px;
+  height: 100vh;
   z-index: 1000;
+  overflow:hidden;
 
   background-image:
     linear-gradient(rgba(10, 40, 80, 0.75), rgba(55, 104, 168, 0.75)),
@@ -112,43 +117,85 @@ p {
 
   backdrop-filter: blur(4px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, .2);
+  transition: width 0.80s ease;
+}
+
+.site-header:hover {
+  width: 280px;
 }
 
 .nav-container{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
-  min-height:86px;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content:flex-start;
   width:100%;
+  padding: 24px 18px;
 }
 
 .brand {
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
+  justify-content: center;
+  width: 100%;
 }
 
 .brand-logo {
-  width: 240px;
-  max-width: 80%;
- margin-right:auto;
+  width: 200px;
+  max-width: 220px;
+  min-width: 220px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.40s ease, transform 0.40s ease;
+
+}
+
+.site-header:hover .brand-logo {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .site-nav {
   display: flex;
-  align-items: right;
-  gap: 64px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.nav-link {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.40s ease;
+  white-space: nowrap;
+} 
+
+.site-header:hover .nav-link {
+  opacity: 1;
+  transform: translateX(0);
+
 }
 
 .site-nav a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  border-radius: 14px;
   color: var(--white);
   font-weight: 600;
   transition: var(--transition);
   font-size: 1.5em;
+  white-space: nowrap;
+  text-decoration: none;
 }
 
 .site-nav a:hover,
 .site-nav a.active {
   color: #cfe3ff;
+  background: rgba(108, 123, 201, 0.408);
 }
 
 .nav-btn {
