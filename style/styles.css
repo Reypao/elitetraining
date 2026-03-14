@@ -121,7 +121,7 @@ p {
 }
 
 .site-header:hover {
-  width: 280px;
+  width: 260px;
 }
 
 .nav-container{
@@ -139,6 +139,7 @@ p {
   margin-bottom: 40px;
   justify-content: center;
   width: 100%;
+  position: relative;
 }
 
 .brand-logo {
@@ -205,12 +206,20 @@ p {
 }
 
 .menu-toggle {
-  display: none;
+  position: absolute;
   background: transparent;
   border: none;
   color: var(--white);
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.30s ease;
+}
+
+.site-header:hover .menu-toggle {
+  opacity: 0;
+  pointer-events: none;
+
 }
 
 /* Navigation bar */
@@ -301,6 +310,17 @@ p {
   top: 10%;
   left: 60%;
 }
+/*add to navigation onJueves night*/
+main,
+footer{
+  margin-left:95px;
+  transition: margin-left .6s ease;
+}
+
+.site-header:hover + main{
+  margin-left:280px;
+}
+
 
 @keyframes floatHex {
 
@@ -803,11 +823,8 @@ p {
 
 
 .social-icons a:hover {
-
   background: #19a4e3;
-
   transform: scale(1.1);
-
 }
 
 
@@ -877,6 +894,8 @@ p {
   .site-nav.show {
     display: flex;
   }
+
+  
 
   .nav-btn {
     width: 100%;

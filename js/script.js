@@ -33,3 +33,11 @@ el.classList.add("hidden")
 observer.observe(el)
 
 })
+
+
+const menuToggle = document.getElementById("menuToggle")
+const sidebar = document.querySelector(".site-header")
+
+menuToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active")
+})
