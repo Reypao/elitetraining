@@ -57,3 +57,17 @@ if (slides.length > 0) {
     slides[currentSlide].classList.add("active");
   }, 5000);
 }
+
+
+const registerButtons = document.querySelectorAll(".btn-register");
+
+registerButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const modalId = button.dataset.course;
+    const modal = document.getElementById(modalId);
+
+    if (modal) {
+      modal.showModal();
+    }
+  });
+});

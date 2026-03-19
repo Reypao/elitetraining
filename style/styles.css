@@ -50,7 +50,7 @@ ul {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 40px ;
   background-color: #a9c79d2c;
 }
 
@@ -95,7 +95,7 @@ h4 {
 }
 
 p {
-  color: #1e2a36;;
+  color: #123b63;;
 }
 
 .site-header {
@@ -322,6 +322,13 @@ footer{
   margin-left:280px;
 }
 
+.footer-copy {
+  color: #fbfcfd;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: .5px;
+}
 
 @keyframes floatHex {
 
@@ -341,7 +348,7 @@ footer{
 
 .hero {
   position: relative;
-  min-height: 48vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -357,7 +364,7 @@ footer{
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero-text {
@@ -799,7 +806,7 @@ footer{
 
   color: white;
   padding-top: 60px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Jura", sans-serif;
 }
 
 .footer-container {
@@ -1010,4 +1017,92 @@ footer{
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+}
+
+/* MODALS */
+
+.course-modal {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  width: 400px;
+  max-width: 90%;
+}
+
+.course-modal::backdrop {
+  background: rgba(0,0,0,.6);
+}
+
+.modal-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.modal-content input {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   Upcoming Training Sessions
+========================= */
+
+.training-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: "Jura", sans-serif;
+}
+
+.training-table th {
+  text-align: left;
+  padding: 12px 10px;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.training-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.training-table tr:hover {
+  background: #f4f8fc;
+}
+
+.training-table button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.training-table button:hover {
+  background: var(--primary-dark);
 }

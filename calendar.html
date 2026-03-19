@@ -59,39 +59,58 @@
                 </div>
             </div>
         </section>
-        <section class="calendar-section container">
-            <h2>Upcoming Training Sessions</h2>
-            <table class="training-calendar">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Course</th>
-                        <th>Location</th>
-                        <th>Register</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>June 10</td>
-                        <td>CPR Certification</td>
-                        <td>Salt Lake City</td>
-                        <td><button class="register-btn">Register</button></td>
-                    </tr>
-                    <tr>
-                        <td>June 15</td>
-                        <td>First Aid Training</td>
-                        <td>West Jordan</td>
-                        <td><button class="register-btn">Register</button></td>
-                    </tr>
-                    <tr>
-                        <td>June 22</td>
-                        <td>Phlebotomy Course</td>
-                        <td>Salt Lake City</td>
-                        <td><button class="register-btn">Register</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <section class="dashboard">
+  <div class="container">
+
+    <h2>Upcoming Training Sessions</h2>
+    <p>View our upcoming training schedule and register for your preferred course.</p>
+
+    <table class="training-table">
+
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Course</th>
+          <th>Location</th>
+          <th>Register</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>June 10</td>
+          <td>CPR Certification</td>
+          <td>Salt Lake City</td>
+          <td>
+            <button class="btn-register" data-course="cprModal">Register</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>June 15</td>
+          <td>First Aid Training</td>
+          <td>West Jordan</td>
+          <td>
+            <button class="btn-register" data-course="firstAidModal">Register</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>June 22</td>
+          <td>Phlebotomy Course</td>
+          <td>Salt Lake City</td>
+          <td>
+            <button class="btn-register" data-course="phlebotomyModal">Register</button>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+</section>
     </main>
     <footer class="elite-footer">
         <div class="footer-container">
@@ -128,11 +147,76 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Elite Training LLC | CPR • First Aid • Phlebotomy</p>
+            <p class="footer-copy">© 2026 Elite Training LLC | CPR • First Aid • Phlebotomy</p>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+
+    <!-- CPR MODAL -->
+<dialog id="cprModal" class="course-modal">
+  <form method="dialog" class="modal-content">
+    <h2>CPR Certification Registration</h2>
+
+    <label>Full Name</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Phone</label>
+    <input type="tel" required>
+
+    <menu class="modal-actions">
+      <button value="cancel">Cancel</button>
+      <button class="btn-primary">Register</button>
+    </menu>
+  </form>
+</dialog>
+
+
+<!-- FIRST AID MODAL -->
+<dialog id="firstAidModal" class="course-modal">
+  <form method="dialog" class="modal-content">
+    <h2>First Aid Training Registration</h2>
+
+    <label>Full Name</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Phone</label>
+    <input type="tel" required>
+
+    <menu class="modal-actions">
+      <button value="cancel">Cancel</button>
+      <button class="btn-primary">Register</button>
+    </menu>
+  </form>
+</dialog>
+
+
+<!-- PHLEBOTOMY MODAL -->
+<dialog id="phlebotomyModal" class="course-modal">
+  <form method="dialog" class="modal-content">
+    <h2>Phlebotomy Course Registration</h2>
+
+    <label>Full Name</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Phone</label>
+    <input type="tel" required>
+
+    <menu class="modal-actions">
+      <button value="cancel">Cancel</button>
+      <button class="btn-primary">Register</button>
+    </menu>
+  </form>
+</dialog>
 
 </body>
 
