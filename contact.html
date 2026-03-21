@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Elite Training LLC</title>
-  <meta name="description" content="Contact Elite Training LLC for CPR, First Aid, Phlebotomy, and healthcare training information."/>
+  <meta name="description" content="Contact Elite Training LLC for CPR, First Aid, Phlebotomy, and healthcare training information." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand">
         <img src="images/eliteLogo.png" alt="Elite Training LLC Logo" class="brand-logo" />
       </a>
-
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
         ☰
       </button>
 
       <nav class="site-nav" id="siteNav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="calendar.html">Calendar</a>
-        <a href="contact.html active" class="active nav-btn">Contact</a>
+        <a href="index.html" class="active"><span class="nav-link">Home</span></a>
+        <a href="services.html"><span class="nav-link">Services</span></a>
+        <a href="about.html"><span class="nav-link">About</span></a>
+        <a href="calendar.html"><span class="nav-link">Calendar</span></a>
+        <a href="contact.html" class="active" class="nav-btn"><span class="nav-link">Contact</span></a>
       </nav>
     </div>
   </header>
@@ -91,13 +95,7 @@
             </select>
 
             <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              placeholder="How can we help you?"
-              required
-            ></textarea>
+            <textarea id="message" name="message" rows="6" placeholder="How can we help you?" required></textarea>
 
             <button type="submit" class="btn btn-primary form-btn">Send Message</button>
             <p class="form-message" id="formMessage"></p>
@@ -107,47 +105,53 @@
     </section>
   </main>
 
-      <footer class="elite-footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="images/eliteLogo.png" alt="Elite Training Logo">
-                <p>
-                    Professional CPR, First Aid and Phlebotomy training designed to prepare students with real practical
-                    skills.
-                </p>
-            </div>
+  <footer class="elite-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/eliteLogo.png" alt="Elite Training Logo">
+        <p>
+          Professional CPR, First Aid and Phlebotomy training designed to prepare students with real practical
+          skills.
+        </p>
+      </div>
 
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
 
-            <div class="footer-contact">
-                <h3>Contact</h3>
-                <p>Email: info@elitetraining.com</p>
-                <p>Phone: (801) 000-0000</p>
-                <p>Salt Lake City Utah, United States</p>
-            </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>Email: info@elitetraining.com</p>
+        <p>Phone: (801) 000-0000</p>
+        <p>Salt Lake City Utah, United States</p>
+      </div>
 
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">© 2026 Elite Training LLC | CPR • First Aid • Phlebotomy</p>
-        </div>
-    </footer>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Elite Training LLC | CPR • First Aid • Phlebotomy</p>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
+      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+    AOS.init();
+    </script>
 </body>
+
 </html>

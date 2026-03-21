@@ -1,5 +1,5 @@
 :root {
-  --primary: #0c3d72;
+  --primary: #205d9f;
   --primary-dark: #082d53;
   --accent: #6d302a;
   --accent-dark: #c62828;
@@ -354,14 +354,6 @@ footer{
   overflow: hidden;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, rgba(8, 31, 57, 0.86), rgba(8, 31, 57, 0.38)),
-    linear-gradient(to top, rgba(8, 31, 57, 0.2), rgba(8, 31, 57, 0.1));
-}
-
 .hero-content {
   position: relative;
   z-index: 3;
@@ -439,12 +431,15 @@ footer{
 .hero-overlay {
   position: absolute;
   inset: 0;
-  z-index: 2;
   background:
-    linear-gradient(to right, rgba(8, 31, 57, 0.86), rgba(8, 31, 57, 0.38)),
-    linear-gradient(to top, rgba(8, 31, 57, 0.2), rgba(8, 31, 57, 0.1));
+    linear-gradient(to right, rgba(8, 31, 57, 0.75), rgba(8, 31, 57, 0.35)),
+    linear-gradient(to top, rgba(8, 31, 57, 0.25), rgba(8, 31, 57, 0.1)),
+    url("../images/background3.jpg");
+    
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 .hero-content {
   position: relative;
   z-index: 3;
@@ -1027,6 +1022,12 @@ footer{
   padding: 0;
   width: 400px;
   max-width: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+
 }
 
 .course-modal::backdrop {
