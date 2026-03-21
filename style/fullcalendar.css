@@ -1,0 +1,73 @@
+.calendar-section {
+    padding: 80px 40px 30px;
+
+}
+
+.calendar-card {
+    background: var(--light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+.calendar-card h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.calendar-card p {
+    margin-bottom: 20px;
+    
+}
+
+#trainingCalendar {
+    width: 100%;
+}
+
+/*fullcalendar*/
+
+.fc {
+    font-family: "Jura", sans-serif;
+
+}
+
+.fc .fc-toolbar-title {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.fc .fc-button {
+  background: var(--primary) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.fc .fc-button:hover {
+  background: var(--primary-dark) !important;
+}
+
+.fc .fc-button:focus {
+  box-shadow: none !important;
+}
+
+.fc .fc-col-header-cell {
+  background: #f4f8fc;
+}
+
+.fc .fc-daygrid-day-number {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.fc .fc-event {
+  background: var(--accent);
+  border: none;
+  padding: 2px 4px;
+  font-size: 0.85rem;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+  border-color: var(--border);
+}
