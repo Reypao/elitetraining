@@ -1,239 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elite Training LLC | Training Calendar</title>
-  <meta name="description"
-    content="View upcoming CPR, First Aid, and Phlebotomy training sessions with Elite Training LLC.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Training LLC | Training Calendar</title>
+    <meta name="description"
+      content="View upcoming CPR, First Aid, and Phlebotomy training sessions with Elite Training LLC.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.js"></script>
+  </head>
 
-<body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand">
-        <img src="images/eliteLogo.png" alt="Elite Training LLC Logo" class="brand-logo" />
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
-        ☰
-      </button>
+  <body>
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand">
+          <img src="images/eliteLogo.png" alt="Elite Training LLC Logo" class="brand-logo" />
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+          ☰
+        </button>
 
-      <nav class="site-nav" id="siteNav">
-        <a href="index.html"><span class="nav-link">Home</span></a>
-        <a href="services.html"><span class="nav-link">Services</span></a>
-        <a href="about.html"><span class="nav-link">About</span></a>
-        <a href="calendar.html" class="active"><span class="nav-link">Calendar</span></a>
-        <a href="contact.html" class="nav-btn"><span class="nav-link">Contact</span></a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hex-background">
-        <div class="hex"></div>
-        <div class="hex"></div>
-        <div class="hex"></div>
-        <div class="hex"></div>
-        <div class="hex"></div>
-        <div class="hex"></div>
+        <nav class="site-nav" id="siteNav">
+          <a href="index.html"><span class="nav-link">Home</span></a>
+          <a href="services.html"><span class="nav-link">Services</span></a>
+          <a href="about.html"><span class="nav-link">About</span></a>
+          <a href="calendar.html" class="active"><span class="nav-link">Calendar</span></a>
+          <a href="contact.html" class="nav-btn"><span class="nav-link">Contact</span></a>
+        </nav>
       </div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="hero-text">
-          <span data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-offset="150" class="eyebrow">Professional Medical Skills Training</span>
-          <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="900" data-aos-offset="200">
-            Upcoming CPR, <br>
-            First Aid & Phlebotomy <br>
-            Training Sessions
-          </h1>
-          <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000" data-aos-offset="150">
-            View our upcoming training schedule and register for your preferred course.
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hex-background">
+          <div class="hex"></div>
+          <div class="hex"></div>
+          <div class="hex"></div>
+          <div class="hex"></div>
+          <div class="hex"></div>
+          <div class="hex"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-offset="150"
+              class="eyebrow">Professional Medical Skills Training</span>
+            <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="900" data-aos-offset="200">
+              Upcoming CPR, <br>
+              First Aid & Phlebotomy <br>
+              Training Sessions
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000" data-aos-offset="150">
+              View our upcoming training schedule and register for your preferred course.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="calendar-section">
+        <div class="container">
+          <div class="calendar-card">
+            <h2>Training Calendar</h2>
+            <p>Check the Schedule Training Dates for Upcoming Sessions.</p>
+            <div id="trainingCalendar">
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard">
+        <div class="container">
+
+          <h2>Upcoming Training Sessions</h2>
+          <p>View our upcoming training schedule and register for your preferred course.</p>
+
+          <table class="training-table">
+
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Course</th>
+                <th>Location</th>
+                <th>Register</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>June 10</td>
+                <td>CPR Certification</td>
+                <td>Salt Lake City</td>
+                <td>
+                  <button class="btn-register" data-course="cprModal">Register</button>
+                </td>
+              </tr>
+              <tr>
+                <td>June 15</td>
+                <td>First Aid Training</td>
+                <td>West Jordan</td>
+                <td>
+                  <button class="btn-register" data-course="firstAidModal">Register</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>June 22</td>
+                <td>Phlebotomy Course</td>
+                <td>Salt Lake City</td>
+                <td>
+                  <button class="btn-register" data-course="phlebotomyModal">Register</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="elite-footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="images/eliteLogo.png" alt="Elite Training Logo">
+          <p>
+            Professional CPR, First Aid and Phlebotomy training designed to prepare students with real practical
+            skills.
           </p>
         </div>
-      </div>
-    </section>
-    <section class="calendar-section">
-      <div class="container">
-        <div class="calendar-card">
-          <h2>Training Calendar</h2>
-          <p>Check the Schedule Training Dates for Upcoming Sessions.</p>
-          <div id="trainingCalendar">
-
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>Email: info@elitetraining.com</p>
+          <p>Phone: (801) 000-0000</p>
+          <p>Salt Lake City, Utah, United States</p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
       </div>
-    </section>
-    <section class="dashboard">
-      <div class="container">
-
-        <h2>Upcoming Training Sessions</h2>
-        <p>View our upcoming training schedule and register for your preferred course.</p>
-
-        <table class="training-table">
-
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Course</th>
-              <th>Location</th>
-              <th>Register</th>
-            </tr>
-          </thead>
-
-          <tbody>
-
-            <tr>
-              <td>June 10</td>
-              <td>CPR Certification</td>
-              <td>Salt Lake City</td>
-              <td>
-                <button class="btn-register" data-course="cprModal">Register</button>
-              </td>
-            </tr>
-            <tr>
-              <td>June 15</td>
-              <td>First Aid Training</td>
-              <td>West Jordan</td>
-              <td>
-                <button class="btn-register" data-course="firstAidModal">Register</button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>June 22</td>
-              <td>Phlebotomy Course</td>
-              <td>Salt Lake City</td>
-              <td>
-                <button class="btn-register" data-course="phlebotomyModal">Register</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Elite Training LLC | CPR • First Aid • Phlebotomy</p>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="elite-footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="images/eliteLogo.png" alt="Elite Training Logo">
-        <p>
-          Professional CPR, First Aid and Phlebotomy training designed to prepare students with real practical
-          skills.
-        </p>
-      </div>
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h3>Contact</h3>
-        <p>Email: info@elitetraining.com</p>
-        <p>Phone: (801) 000-0000</p>
-        <p>Salt Lake City, Utah, United States</p>
-      </div>
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Elite Training LLC | CPR • First Aid • Phlebotomy</p>
-    </div>
-  </footer>
+    <!-- CPR MODAL -->
+    <dialog id="cprModal" class="course-modal">
+      <form action="https://api.web3forms.com/submit" method="POST" class="modal-content">
+        <!-- REQUIRED -->
+        <input type="hidden" name="access_key" value="a2b1df0f-13a0-4ab2-a24d-e721e9476dfc">
+        <!-- EMAIL SETTINGS -->
+        <input type="hidden" name="subject" value="New CPR Registration - Elite Training">
+        <input type="hidden" name="from_name" value="Elite Training Website">
+        <h2>CPR Certification Registration</h2>
 
-  <!-- CPR MODAL -->
-  <dialog id="cprModal" class="course-modal">
-    <form action="https://api.web3forms.com/submit" method="POST" class="modal-content">
-      <input type="hidden" name="access_key" value="ad5980f2-328d-4ff7-b0ca-d069a97b7ad1">
-      <h2>CPR Certification Registration</h2>
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+        <label>Email</label>
+        <input type="email" name="email" required>
+        <label>Phone</label>
+        <input type="tel" name="phone" required>
+        <!-- EXTRA DATA (important) -->
+        <input type="hidden" name="course" value="CPR Certification">
 
-      <label>Full Name</label>
-      <input type="text" required>
+        <menu class="modal-actions">
+          <button value="cancel">Cancel</button>
+          <button class="btn-primary">Register</button>
+        </menu>
+      </form>
+    </dialog>
 
-      <label>Email</label>
-      <input type="email" required>
+    <!-- FIRST AID MODAL -->
+    <dialog id="firstAidModal" class="course-modal">
+      <form method="dialog" class="modal-content">
+        <h2>First Aid Training Registration</h2>
 
-      <label>Phone</label>
-      <input type="tel" required>
+        <label>Full Name</label>
+        <input type="hidden" name="course" value="First Aid Training">
+        <label>Email</label>
+        <input type="email" name="email" required>
+        <label>Phone</label>
+        <input type="tel" name="phone" required>
 
-      <menu class="modal-actions">
-        <button value="cancel">Cancel</button>
-        <button class="btn-primary">Register</button>
-      </menu>
-    </form>
-  </dialog>
+        <menu class="modal-actions">
+          <button value="cancel">Cancel</button>
+          <button class="btn-primary">Register</button>
+        </menu>
+      </form>
+    </dialog>
 
+    <!-- PHLEBOTOMY MODAL -->
+    <dialog id="phlebotomyModal" class="course-modal">
+      <form method="dialog" class="modal-content">
+        <h2>Phlebotomy Course Registration</h2>
 
-  <!-- FIRST AID MODAL -->
-  <dialog id="firstAidModal" class="course-modal">
-    <form method="dialog" class="modal-content">
-      <h2>First Aid Training Registration</h2>
+        <label>Full Name</label>
+        <input type="hidden" name="course" value="Phlebotomy Course">
+        <label>Email</label>
+        <input type="email" name="email" required>
+        <label>Phone</label>
+        <input type="tel" name="phone" required>
 
-      <label>Full Name</label>
-      <input type="text" required>
+        <menu class="modal-actions">
+          <button value="cancel">Cancel</button>
+          <button class="btn-primary">Register</button>
+        </menu>
+      </form>
+    </dialog>
 
-      <label>Email</label>
-      <input type="email" required>
-
-      <label>Phone</label>
-      <input type="tel" required>
-
-      <menu class="modal-actions">
-        <button value="cancel">Cancel</button>
-        <button class="btn-primary">Register</button>
-      </menu>
-    </form>
-  </dialog>
-
-
-  <!-- PHLEBOTOMY MODAL -->
-  <dialog id="phlebotomyModal" class="course-modal">
-    <form method="dialog" class="modal-content">
-      <h2>Phlebotomy Course Registration</h2>
-
-      <label>Full Name</label>
-      <input type="text" required>
-
-      <label>Email</label>
-      <input type="email" required>
-
-      <label>Phone</label>
-      <input type="tel" required>
-
-      <menu class="modal-actions">
-        <button value="cancel">Cancel</button>
-        <button class="btn-primary">Register</button>
-      </menu>
-    </form>
-  </dialog>
     <script src="js/script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <script>
-    AOS.init();
-  </script>
-  <script src="js/fullcalendar.js"></script>
-</body>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/fullcalendar.js"></script>
+
+    <script>
+      // REGISTER BUTTONS (table)
+      document.querySelectorAll(".btn-register").forEach(button => {
+        button.addEventListener("click", () => {
+          const modalId = button.dataset.course;
+          const modal = document.getElementById(modalId);
+          if (modal) modal.showModal();
+        });
+      });
+
+      // CLOSE MODALS
+      document.querySelectorAll(".course-modal").forEach(modal => {
+        modal.addEventListener("click", (e) => {
+          const rect = modal.getBoundingClientRect();
+          if (
+            e.clientX < rect.left ||
+            e.clientX > rect.right ||
+            e.clientY < rect.top ||
+            e.clientY > rect.bottom
+          ) {
+            modal.close();
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll(".modal-content").forEach(form => {
+        form.addEventListener("submit", function () {
+          setTimeout(() => {
+            alert("✅ Registration submitted! We will contact you shortly.");
+          }, 500);
+        });
+      });
+    </script>
+
+  </body>
 
 </html>
