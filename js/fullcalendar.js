@@ -29,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const calendar = new FullCalendar.Calendar(calendarEl, {
 
     initialView: "dayGridMonth",
-
+    height:'auto',
+    aspectRatio: 3,
+    expandRows: false,
+    dayMaxEventRows: 2,
     events: events.map(e => ({
       title: e.title,
       start: e.start,
