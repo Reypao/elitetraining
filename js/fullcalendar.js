@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const calendar = new FullCalendar.Calendar(calendarEl, {
 
     initialView: "dayGridMonth",
-    height:'auto',
+    height: 'auto',
     aspectRatio: 3,
     expandRows: false,
     dayMaxEventRows: 2,
@@ -51,7 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (modal) {
         const form = modal.querySelector("form");
-
+        let courseInput = form.querySelector("input[name='course']");
+        if (!courseInput) {
+          courseInput = document.createElement("input");
+          courseInput.type = "hidden";
+          courseInput.name = "course";
+          form.appendChild(courseInput);
+        }
+        courseInput.value = info.event.title;
         // Inject selected date
         let dateInput = form.querySelector("input[name='date']");
         if (!dateInput) {
@@ -77,35 +84,44 @@ const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const formData = new FormData(form);
-    formData.append("access_key", "a2b1df0f-13a0-4ab2-a24d-e721e9476dfc");
+  const formData = new FormData(form);
+  formData.append("access_key", "a2b1df0f-13a0-4ab2-a24d-e721e9476dfc");
 
-    const originalText = submitBtn.textContent;
+  const originalText = submitBtn.textContent;
 
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+  submitBtn.disabled = true;
 
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+  try {
+    await window.addDoc(window.collection(window.db, "registrations"), {
+      fullName: formData.get("full_name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      course: formData.get("course"),
+      date: formData.get("date"),
+      createdAt: new Date()
+    });
 
-        const data = await response.json();
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
 
-        if (response.ok) {
-            alert("Success! Your message has been sent.");
-            form.reset();
-        } else {
-            alert("Error: " + data.message);
-        }
+    const data = await response.json();
 
-    } catch (error) {
-        alert("Something went wrong. Please try again.");
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
+    if (response.ok) {
+      alert("Success! Your message has been sent.");
+      form.reset();
+    } else {
+      alert("Error: " + data.message);
     }
+
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
 });
